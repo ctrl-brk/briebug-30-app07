@@ -1,0 +1,16 @@
+<mat-card class="h-100">
+  <mat-card-header>
+    <mat-card-title>
+      <h2>Drinks</h2>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let item of drinks" (click)="selected.emit(item)">
+        <h3 mat-line>{{item.title}}</h3>
+        <p mat-line>{{item.details}}</p>
+        <button mat-icon-button (click)="deleted.emit(item);$event.stopImmediatePropagation()"><mat-icon *ngIf="!readonly">close</mat-icon></button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

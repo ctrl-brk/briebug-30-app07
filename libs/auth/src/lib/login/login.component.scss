@@ -1,0 +1,10 @@
+.login {
+  width: 400px;
+
+  button { margin-right: 8px; }
+}
+
+::ng-deep .red-tooltip {
+  background-color: #ff8080;
+  color: yellow !important;
+}

@@ -1,0 +1,8 @@
+<div class="row mt-5" style="margin-left: 85px">
+  <div class="col">
+    <app-drinks-list [drinks]="drinks$ | async" (selected)=selectDrink($event) (deleted)="deleteDrink($event)"></app-drinks-list>
+  </div>
+  <div class="col">
+    <app-drink-details [drinkId]="drinkId" (saved)="saveDrink($event)" (cancelled)="cancel()"></app-drink-details>
+  </div>
+</div>
